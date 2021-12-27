@@ -2,7 +2,7 @@
 
 A beginner level task for practicing Boolean values and logic operators.
 
-Estimated time to complete the task - 2h.
+Estimated time to complete the task - 1h.
 
 The task requires .NET 6 SDK.
 

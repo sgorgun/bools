@@ -52,7 +52,7 @@
 
         public static bool LogicalXor3(bool b1, bool b2, bool b3, bool b4)
         {
-            // TODO #2-9. Return the result of logical AND for b1, b2, b3 and b4 parameters.
+            // TODO #2-9. Return the result of logical exclusive OR for b1, b2, b3 and b4 parameters.
             throw new NotImplementedException();
         }
 
