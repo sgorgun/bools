@@ -1,10 +1,10 @@
 # Bools and Logic Operators
 
-A beginner level task for practicing Boolean values and logic operators.
+Beginner level task for practicing Boolean values and logic operators.
 
 Estimated time to complete the task - 1h.
 
-The task requires .NET 6 SDK.
+The task requires .NET 6 SDK installed.
 
 
 ## Task Description
@@ -14,23 +14,23 @@ The task has three sections with small sub-tasks in the code files. Each sub-tas
 
 ### Bools
 
-Read [bool](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool) article.
+Read the [bool](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool) article.
 
-Open [Booleans.cs](Bools/Booleans.cs) file, and implement all methods by returning a Boolean value.
+Open the [Booleans.cs](Bools/Booleans.cs) file, and implement all methods by returning a Boolean value.
 
 | Method Name | Literals |
 |-------------|----------|
 | ReturnTrue  | true     |
 | ReturnFalse | false    |
 
-There are only two possible literals for _bool_ data type - _true_ and _false_.
+There are only two possible literals for the _bool_ data type - _true_ and _false_.
 
 
 ### Logical Operators
 
-Read [Boolean logical operators](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators) article.
+Read the [Boolean logical operators](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators) article.
 
-Open [LogicalOperators.cs](Bools/LogicalOperators.cs) file, and implement all methods by applying a logical operation to the method parameters.
+Open the [LogicalOperators.cs](Bools/LogicalOperators.cs) file, and implement all methods by applying a logical operation to method parameters.
 
 | Method Name | Logical Operation    | Operator |
 |-------------|----------------------|----------|
@@ -45,7 +45,7 @@ Open [LogicalOperators.cs](Bools/LogicalOperators.cs) file, and implement all me
 | LogicalXor3 | Logical exclusive OR | ^        |
 | Negate      | Logical negation     | !        |
 
-Start with [LogicalAnd1](Bools/LogicalOperators.cs#L5) method.
+Start with the [LogicalAnd1](Bools/LogicalOperators.cs#L5) method.
 
 ```cs
 public static bool LogicalAnd1(bool b1, bool b2)
@@ -64,7 +64,7 @@ public static bool LogicalAnd1(bool b1, bool b2)
 }
 ```
 
-Return the result of logical AND operation for _b1_ and _b2_ parameters by applying [operator &&](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#conditional-logical-and-operator-).
+Return the result of logical AND operation for the _b1_ and _b2_ parameters by applying [operator &&](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#conditional-logical-and-operator-).
 
 ```cs
 public static bool LogicalAnd1(bool b1, bool b2)
@@ -83,7 +83,7 @@ public static bool LogicalAnd1(bool b1, bool b2)
 }
 ```
 
-Create the [truth table](https://en.wikipedia.org/wiki/Truth_table) for _logical AND (conjunction)_ for _b1_ and _b2_ parameters.
+Create the [truth table](https://en.wikipedia.org/wiki/Truth_table) for _logical AND (conjunction)_ for the _b1_ and _b2_ parameters.
 
 | b1    | b2    | b1 && b2 |
 |-------|-------|----------|
@@ -97,9 +97,11 @@ Implement the other methods and create the truth tables for them (no need to add
 
 ### Logical Puzzles
 
-Use the logical operators only to solve the logical puzzles in the [LogicalPuzzles.cs](Bools/LogicalPuzzles.cs) file.
+In this section you have to use the logical operators to solve the logical puzzles in the [LogicalPuzzles.cs](Bools/LogicalPuzzles.cs) file. You can combine the logical operators together to get the expected result of a logical function. Start with creating a _truth table_ for a logical function you work with, then analyze it and reconstruct a logical function to satisfy the truth table criteria.
 
-Here's the example of solving [Puzzle1](Bools/LogicalPuzzles.cs#L5) puzzle. Take a look at the list of test cases for [Puzzle1_ReturnBool](Bools.Tests/LogicalOperatorsTests.cs#L10) unit test and create an expected truth table for an operation you have to implement in the _Puzzle1_ method.
+Here's the example of solving [Puzzle1](Bools/LogicalPuzzles.cs#L5) puzzle.
+
+Take a look at the list of test cases for the [Puzzle1_ReturnBool](Bools.Tests/LogicalOperatorsTests.cs#L10) unit test and create an expected truth table for the operation you have to implement in the _Puzzle1_ method.
 
 | b1    | b2    | Expected Result |
 |-------|-------|-----------------|
@@ -108,9 +110,16 @@ Here's the example of solving [Puzzle1](Bools/LogicalPuzzles.cs#L5) puzzle. Take
 | false | true  | true            |
 | true  | true  | true            |
 
-Compare the truth table with the truth table for _logical OR_ operation - you will find that the tables are very similar.
+Compare this truth table with the [truth table for logical OR operation](https://en.wikipedia.org/wiki/Truth_table#Logical_disjunction_(OR)) - you will find that they are very similar.
 
-Apply _operator &&_ to _b1_ and _b2_ parameters.
+| b1    | b2    | Logical OR      |
+|-------|-------|-----------------|
+| false | false | false           |
+| true  | false | true            |
+| false | true  | true            |
+| true  | true  | true            |
+
+Apply _operator ||_ to _b1_ and _b2_ parameters.
 
 ```cs
 public static bool Puzzle1(bool b1, bool b2)
@@ -121,12 +130,12 @@ public static bool Puzzle1(bool b1, bool b2)
 
 Now, the _Puzzle1_ truth table is similar to the expected truth table except for the case when _b2_ parameter is false.
 
-| b1    | b2    | Actual Result |
-|-------|-------|---------------|
-| false | false | false         |
-| true  | false | true          |
-| false | true  | true          |
-| true  | true  | true          |
+| b1    | b2    | Actual Result | Expected Result |
+|-------|-------|---------------|-----------------|
+| false | false | **false**     | **true**        |
+| true  | false | **true**      | **false**       |
+| false | true  | true          | true            |
+| true  | true  | true          | true            |
 
 That means a logical negation should be applied to the _b1_ parameter.
 
@@ -137,7 +146,7 @@ public static bool Puzzle1(bool b1, bool b2)
 }
 ```
 
-Now the method produces correct actual results for all tests cases.
+Now the method produces correct expected results for all tests cases for the _Puzzle1_ReturnBool_ unit test.
 
 Implement the other logical puzzles in the same way. Some puzzles assume using parentheses to change the order of [operand evaluation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/#operand-evaluation).
 
