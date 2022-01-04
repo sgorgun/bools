@@ -1,4 +1,4 @@
-﻿namespace Bools.Test
+﻿namespace Bools.Tests
 {
     [TestFixture]
     public class LogicalOperatorsTests

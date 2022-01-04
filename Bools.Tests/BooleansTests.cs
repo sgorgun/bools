@@ -1,18 +1,28 @@
 ﻿global using NUnit.Framework;
 
-namespace Bools.Test
+namespace Bools.Tests
 {
     [TestFixture]
     public class BooleansTests
     {
-        public static bool ReturnTrue()
+        [Test]
+        public static void ReturnTrue()
         {
-            return true;
+            // Act
+            var actualResult = Bools.Booleans.ReturnTrue();
+
+            // Assert
+            Assert.IsTrue(actualResult);
         }
 
-        public static bool ReturnFalse()
+        [Test]
+        public static void ReturnFalse()
         {
-            return true;
+            // Act
+            var actualResult = Bools.Booleans.ReturnFalse();
+
+            // Assert
+            Assert.IsFalse(actualResult);
         }
     }
 }
