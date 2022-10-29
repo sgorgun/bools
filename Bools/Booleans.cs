@@ -4,14 +4,12 @@
     {
         public static bool ReturnTrue()
         {
-            // TODO #1-1. Return "true" literal.
-            throw new NotImplementedException();
+            return true;
         }
 
         public static bool ReturnFalse()
         {
-            // TODO #1-2. Return "false" literal.
-            throw new NotImplementedException();
+            return false;
         }
     }
 }
